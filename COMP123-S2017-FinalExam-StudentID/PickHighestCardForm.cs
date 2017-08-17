@@ -20,11 +20,12 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
-
-
-
+    
     public partial class PickHighestCardForm : Form
     {
+
+        private ScoreBoard scoreboard = null;
+        
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         List<PictureBox> _dealtCardPictureBoxList;
         int _currentDealtCardIndex;
@@ -32,6 +33,30 @@ namespace COMP123_S2017_FinalExam_StudentID
         Deck _deck;
         Hand _hand;
         int _maximumPoints;
+
+
+        public TextBox scoreTextBox
+        {
+            get
+            {
+                return ScoreTextBox;
+            }
+        }
+        public TextBox finalScoreTextBox
+        {
+            get
+            {
+                return FinalScoreTextBox;
+            }
+        }
+        public TextBox timeTextBox
+        {
+            get
+            {
+                return TimeTextBox;
+            }
+        }
+
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -129,6 +154,7 @@ namespace COMP123_S2017_FinalExam_StudentID
         /// <param name="e"></param>
         private void DealButton_Click(object sender, EventArgs e)
         {
+            
             this._hideCards();
             this._resetDeck();
             CardShowTimer.Enabled = true;
@@ -275,7 +301,8 @@ namespace COMP123_S2017_FinalExam_StudentID
                 this.CurrentClickedCard.BackColor = Color.Green;
                 UserMessageTextBox.Text = "You Got It!";
 
-                //Uncomment this --> ScoreBoard.Score += this.MaximumPoints;
+                //Uncomment this --> 
+                ScoreBoard.score += this.MaximumPoints;
 
                 DealButton.Enabled = true;
             }
@@ -361,16 +388,17 @@ namespace COMP123_S2017_FinalExam_StudentID
         /// <param name="e"></param>
         private void CountDownTimer_Tick(object sender, EventArgs e)
         {
-            /* Uncomment THIS
-            ScoreBoard.UpdateTime();
-            if (ScoreBoard.Time == 0)
-            {
-                CountDownTimer.Enabled = false;
-                DealButton.Enabled = false;
-                this._disableDealtCards();
-                this._showFinalScore();
-            }
-            */
+            // Uncomment THIS
+            //scoreboard = new ScoreBoard(scoreTextBox, timeTextBox, finalScoreTextBox);
+            //ScoreBoard.UpdateTime();
+            //if (ScoreBoard.time == 0)
+            //{
+            //    CountDownTimer.Enabled = false;
+            //    DealButton.Enabled = false;
+            //    this._disableDealtCards();
+            //    this._showFinalScore();
+            //}
+            //*/
         }
 
         /// <summary>

@@ -7,23 +7,29 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
-    class ScoreBoard
+    public class ScoreBoard
     {
-        private TextBox _finalScoreTextBox { get; set; }
-        private int _score {get; set;}
-        private TextBox _scoreTextBox { get; set; }
-        private int _time { get; set; }
-        private TextBox _timeTextBox { get; set; }
+        private static TextBox _finalScoreTextBox { get; set; }
+        private static int _score {get; set;}
+        private static TextBox _scoreTextBox { get; set; }
+        private static int _time { get; set; }
+        private static TextBox _timeTextBox { get; set; }
         
 
-        ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
+        public ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
+        {
+            init(scoreTextBox, timeTextBox, finalScoreTextBox);
+            
+        }
+
+        public void init(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
         {
             _scoreTextBox = scoreTextBox;
             _timeTextBox = timeTextBox;
             _finalScoreTextBox = finalScoreTextBox;
         }
 
-        public void UpdateTime()
+        public static void UpdateTime()
         {
 
             _scoreTextBox.Text = "" + _score;
@@ -31,7 +37,7 @@ namespace COMP123_S2017_FinalExam_StudentID
 
         }
 
-        public int score
+        public static int score
         {
 
             get
@@ -46,7 +52,7 @@ namespace COMP123_S2017_FinalExam_StudentID
 
         }
 
-        public int time
+        public static int time
         {
 
             get

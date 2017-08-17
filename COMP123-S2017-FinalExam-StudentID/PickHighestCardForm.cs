@@ -11,15 +11,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name: Jonghyun Oh
+ * Date: 2017-08-17
+ * StudentID: 300921985
+ * Description: final exam
+ * Version: 1.0
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
+
+
+
     public partial class PickHighestCardForm : Form
     {
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.DealButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.CardShowTimer = new System.Windows.Forms.Timer(this.components);
-            this.UserMessageTextBox = new System.Windows.Forms.TextBox();
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.CardFlipTimer = new System.Windows.Forms.Timer(this.components);
             this.FifthCardPictureBox = new System.Windows.Forms.PictureBox();
             this.FourthCardPictureBox = new System.Windows.Forms.PictureBox();
             this.ThirdCardPictureBox = new System.Windows.Forms.PictureBox();
             this.SecondCardPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstCardPictureBox = new System.Windows.Forms.PictureBox();
+            this.CardShowTimer = new System.Windows.Forms.Timer(this.components);
+            this.UserMessageTextBox = new System.Windows.Forms.TextBox();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.CardFlipTimer = new System.Windows.Forms.Timer(this.components);
             this.ScoreTextBox = new System.Windows.Forms.TextBox();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
@@ -88,6 +88,72 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(558, 108);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // FifthCardPictureBox
+            // 
+            this.FifthCardPictureBox.BackColor = System.Drawing.Color.Black;
+            this.FifthCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
+            this.FifthCardPictureBox.Location = new System.Drawing.Point(15, 3);
+            this.FifthCardPictureBox.Name = "FifthCardPictureBox";
+            this.FifthCardPictureBox.Size = new System.Drawing.Size(96, 102);
+            this.FifthCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.FifthCardPictureBox.TabIndex = 5;
+            this.FifthCardPictureBox.TabStop = false;
+            this.FifthCardPictureBox.Visible = false;
+            this.FifthCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
+            // 
+            // FourthCardPictureBox
+            // 
+            this.FourthCardPictureBox.BackColor = System.Drawing.Color.Black;
+            this.FourthCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
+            this.FourthCardPictureBox.Location = new System.Drawing.Point(126, 3);
+            this.FourthCardPictureBox.Name = "FourthCardPictureBox";
+            this.FourthCardPictureBox.Size = new System.Drawing.Size(96, 102);
+            this.FourthCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.FourthCardPictureBox.TabIndex = 4;
+            this.FourthCardPictureBox.TabStop = false;
+            this.FourthCardPictureBox.Visible = false;
+            this.FourthCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
+            // 
+            // ThirdCardPictureBox
+            // 
+            this.ThirdCardPictureBox.BackColor = System.Drawing.Color.Black;
+            this.ThirdCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
+            this.ThirdCardPictureBox.Location = new System.Drawing.Point(237, 3);
+            this.ThirdCardPictureBox.Name = "ThirdCardPictureBox";
+            this.ThirdCardPictureBox.Size = new System.Drawing.Size(96, 102);
+            this.ThirdCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ThirdCardPictureBox.TabIndex = 3;
+            this.ThirdCardPictureBox.TabStop = false;
+            this.ThirdCardPictureBox.Visible = false;
+            this.ThirdCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
+            // 
+            // SecondCardPictureBox
+            // 
+            this.SecondCardPictureBox.BackColor = System.Drawing.Color.Black;
+            this.SecondCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
+            this.SecondCardPictureBox.Location = new System.Drawing.Point(348, 3);
+            this.SecondCardPictureBox.Name = "SecondCardPictureBox";
+            this.SecondCardPictureBox.Size = new System.Drawing.Size(96, 102);
+            this.SecondCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.SecondCardPictureBox.TabIndex = 2;
+            this.SecondCardPictureBox.TabStop = false;
+            this.SecondCardPictureBox.Visible = false;
+            this.SecondCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
+            // 
+            // FirstCardPictureBox
+            // 
+            this.FirstCardPictureBox.BackColor = System.Drawing.Color.Black;
+            this.FirstCardPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FirstCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
+            this.FirstCardPictureBox.Location = new System.Drawing.Point(459, 3);
+            this.FirstCardPictureBox.Name = "FirstCardPictureBox";
+            this.FirstCardPictureBox.Size = new System.Drawing.Size(96, 102);
+            this.FirstCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.FirstCardPictureBox.TabIndex = 1;
+            this.FirstCardPictureBox.TabStop = false;
+            this.FirstCardPictureBox.Visible = false;
+            this.FirstCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
+            // 
             // CardShowTimer
             // 
             this.CardShowTimer.Interval = 350;
@@ -101,7 +167,7 @@
             this.UserMessageTextBox.Location = new System.Drawing.Point(12, 75);
             this.UserMessageTextBox.Name = "UserMessageTextBox";
             this.UserMessageTextBox.ReadOnly = true;
-            this.UserMessageTextBox.Size = new System.Drawing.Size(558, 38);
+            this.UserMessageTextBox.Size = new System.Drawing.Size(558, 30);
             this.UserMessageTextBox.TabIndex = 3;
             this.UserMessageTextBox.TabStop = false;
             this.UserMessageTextBox.Text = "Click the Deal Button!";
@@ -122,72 +188,6 @@
             this.CardFlipTimer.Interval = 16;
             this.CardFlipTimer.Tick += new System.EventHandler(this.CardFlipTimer_Tick);
             // 
-            // FifthCardPictureBox
-            // 
-            this.FifthCardPictureBox.BackColor = System.Drawing.Color.Black;
-            this.FifthCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
-            this.FifthCardPictureBox.Location = new System.Drawing.Point(447, 3);
-            this.FifthCardPictureBox.Name = "FifthCardPictureBox";
-            this.FifthCardPictureBox.Size = new System.Drawing.Size(96, 102);
-            this.FifthCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.FifthCardPictureBox.TabIndex = 5;
-            this.FifthCardPictureBox.TabStop = false;
-            this.FifthCardPictureBox.Visible = false;
-            this.FifthCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
-            // 
-            // FourthCardPictureBox
-            // 
-            this.FourthCardPictureBox.BackColor = System.Drawing.Color.Black;
-            this.FourthCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
-            this.FourthCardPictureBox.Location = new System.Drawing.Point(336, 3);
-            this.FourthCardPictureBox.Name = "FourthCardPictureBox";
-            this.FourthCardPictureBox.Size = new System.Drawing.Size(96, 102);
-            this.FourthCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.FourthCardPictureBox.TabIndex = 4;
-            this.FourthCardPictureBox.TabStop = false;
-            this.FourthCardPictureBox.Visible = false;
-            this.FourthCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
-            // 
-            // ThirdCardPictureBox
-            // 
-            this.ThirdCardPictureBox.BackColor = System.Drawing.Color.Black;
-            this.ThirdCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
-            this.ThirdCardPictureBox.Location = new System.Drawing.Point(225, 3);
-            this.ThirdCardPictureBox.Name = "ThirdCardPictureBox";
-            this.ThirdCardPictureBox.Size = new System.Drawing.Size(96, 102);
-            this.ThirdCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ThirdCardPictureBox.TabIndex = 3;
-            this.ThirdCardPictureBox.TabStop = false;
-            this.ThirdCardPictureBox.Visible = false;
-            this.ThirdCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
-            // 
-            // SecondCardPictureBox
-            // 
-            this.SecondCardPictureBox.BackColor = System.Drawing.Color.Black;
-            this.SecondCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
-            this.SecondCardPictureBox.Location = new System.Drawing.Point(114, 3);
-            this.SecondCardPictureBox.Name = "SecondCardPictureBox";
-            this.SecondCardPictureBox.Size = new System.Drawing.Size(96, 102);
-            this.SecondCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.SecondCardPictureBox.TabIndex = 2;
-            this.SecondCardPictureBox.TabStop = false;
-            this.SecondCardPictureBox.Visible = false;
-            this.SecondCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
-            // 
-            // FirstCardPictureBox
-            // 
-            this.FirstCardPictureBox.BackColor = System.Drawing.Color.Black;
-            this.FirstCardPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.FirstCardPictureBox.Image = global::COMP123_S2017_FinalExam_StudentID.Properties.Resources.cardback;
-            this.FirstCardPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.FirstCardPictureBox.Name = "FirstCardPictureBox";
-            this.FirstCardPictureBox.Size = new System.Drawing.Size(96, 102);
-            this.FirstCardPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.FirstCardPictureBox.TabIndex = 1;
-            this.FirstCardPictureBox.TabStop = false;
-            this.FirstCardPictureBox.Visible = false;
-            this.FirstCardPictureBox.Click += new System.EventHandler(this.CardPictureBox_Click);
-            // 
             // ScoreTextBox
             // 
             this.ScoreTextBox.BackColor = System.Drawing.Color.Black;
@@ -196,7 +196,7 @@
             this.ScoreTextBox.Location = new System.Drawing.Point(139, 12);
             this.ScoreTextBox.Name = "ScoreTextBox";
             this.ScoreTextBox.ReadOnly = true;
-            this.ScoreTextBox.Size = new System.Drawing.Size(151, 38);
+            this.ScoreTextBox.Size = new System.Drawing.Size(151, 30);
             this.ScoreTextBox.TabIndex = 5;
             this.ScoreTextBox.TabStop = false;
             this.ScoreTextBox.Text = "0";
@@ -208,7 +208,7 @@
             this.ScoreLabel.ForeColor = System.Drawing.Color.White;
             this.ScoreLabel.Location = new System.Drawing.Point(12, 12);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(121, 39);
+            this.ScoreLabel.Size = new System.Drawing.Size(99, 31);
             this.ScoreLabel.TabIndex = 6;
             this.ScoreLabel.Text = "Score:";
             // 
@@ -219,7 +219,7 @@
             this.TimeLabel.ForeColor = System.Drawing.Color.White;
             this.TimeLabel.Location = new System.Drawing.Point(296, 12);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(107, 39);
+            this.TimeLabel.Size = new System.Drawing.Size(87, 31);
             this.TimeLabel.TabIndex = 8;
             this.TimeLabel.Text = "Time:";
             // 
@@ -231,7 +231,7 @@
             this.TimeTextBox.Location = new System.Drawing.Point(423, 12);
             this.TimeTextBox.Name = "TimeTextBox";
             this.TimeTextBox.ReadOnly = true;
-            this.TimeTextBox.Size = new System.Drawing.Size(151, 38);
+            this.TimeTextBox.Size = new System.Drawing.Size(151, 30);
             this.TimeTextBox.TabIndex = 7;
             this.TimeTextBox.TabStop = false;
             this.TimeTextBox.Text = "30";
@@ -259,7 +259,7 @@
             this.FinalScoreTextBox.Location = new System.Drawing.Point(229, 329);
             this.FinalScoreTextBox.Name = "FinalScoreTextBox";
             this.FinalScoreTextBox.ReadOnly = true;
-            this.FinalScoreTextBox.Size = new System.Drawing.Size(171, 38);
+            this.FinalScoreTextBox.Size = new System.Drawing.Size(171, 30);
             this.FinalScoreTextBox.TabIndex = 10;
             this.FinalScoreTextBox.TabStop = false;
             this.FinalScoreTextBox.Text = "0";
@@ -273,7 +273,7 @@
             this.FinalScoreLabel.ForeColor = System.Drawing.Color.White;
             this.FinalScoreLabel.Location = new System.Drawing.Point(12, 328);
             this.FinalScoreLabel.Name = "FinalScoreLabel";
-            this.FinalScoreLabel.Size = new System.Drawing.Size(211, 39);
+            this.FinalScoreLabel.Size = new System.Drawing.Size(171, 31);
             this.FinalScoreLabel.TabIndex = 11;
             this.FinalScoreLabel.Text = "Final Score:";
             this.FinalScoreLabel.Visible = false;
@@ -298,6 +298,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
             this.Name = "PickHighestCardForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pick The Highest Card";
             this.Load += new System.EventHandler(this.PickHighestCardForm_Load);
